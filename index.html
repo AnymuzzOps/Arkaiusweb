@@ -25,6 +25,8 @@
         </svg>
         <p>ARKAIUS DIGITAL</p>
         <span>Initializing Arkaius Systems</span>
+        <span class="loader__status" aria-live="polite">AI Core Online</span>
+        <div class="loader__sparks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="loader__progress"><b>//01</b><b>//24</b><b>//87</b><b>&gt;&gt;&gt;</b></div>
       </div>
     </div>
@@ -37,6 +39,9 @@
       <div class="stage__scanlines" aria-hidden="true"></div>
       <div class="stage__glow stage__glow--mouse" aria-hidden="true"></div>
       <div class="stage__glow stage__glow--lens" aria-hidden="true"></div>
+      <div class="cursor-glow" aria-hidden="true"></div>
+
+      <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido sutil">SOUND OFF</button>
 
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Arkaius Digital inicio">
@@ -49,7 +54,7 @@
           <a href="#proceso">Proceso</a>
           <a href="#demo">Demo</a>
         </nav>
-        <a class="header-cta" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a class="header-cta magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">WhatsApp</a>
       </header>
 
       <main id="top" class="stage__content">
@@ -59,8 +64,8 @@
             <h1>Tecnología que automatiza, conecta y escala tu empresa.</h1>
             <p>Creamos bots con IA, automatizaciones, páginas web y soluciones tecnológicas para empresas que quieren avanzar con herramientas modernas, eficientes y bien implementadas.</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Solicitar asesoría</a>
-              <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+              <a class="btn btn--primary magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Solicitar asesoría</a>
+              <a class="btn btn--ghost magnetic" href="#servicios">Ver servicios</a>
             </div>
             <div class="hero__stats" aria-label="Beneficios principales">
               <span><b>24/7</b> atención automatizada</span>
@@ -76,13 +81,14 @@
                 <path d="M86 210 H162 M258 210 H334 M210 86 V162 M210 258 V334" />
                 <path d="M122 122 L168 168 M252 252 L298 298 M298 122 L252 168 M168 252 L122 298" />
               </svg>
-              <div class="digital-core"><i></i></div>
-              <div class="signal signal--one">IA</div>
-              <div class="signal signal--two">Bots</div>
-              <div class="signal signal--three">Web</div>
-              <div class="signal signal--four">Redes</div>
-              <div class="signal signal--five">Soporte TI</div>
-              <div class="signal signal--six">Automatización</div>
+              <div class="hero-links" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="digital-core"><i></i><span></span><span></span><span></span></div>
+              <div class="signal signal--one" data-status="AI module active">IA</div>
+              <div class="signal signal--two" data-status="Bot flow ready">Bots</div>
+              <div class="signal signal--three" data-status="Web layer deployed">Web</div>
+              <div class="signal signal--four" data-status="Network signal stable">Redes</div>
+              <div class="signal signal--five" data-status="Support channel online">Soporte TI</div>
+              <div class="signal signal--six" data-status="Automation route synced">Automatización</div>
             </div>
           </div>
         </section>
@@ -105,7 +111,7 @@
         <section class="section flow scene" id="flujo" data-scene="automation">
           <div class="flow__copy reveal"><span class="eyebrow">Arquitectura inteligente</span><h2>Convertimos procesos sueltos en sistemas inteligentes.</h2><p>Diseñamos soluciones que conectan atención, automatización, datos y ejecución para que tu negocio funcione con más orden, rapidez y eficiencia.</p></div>
           <div class="flowline reveal" aria-label="Flujo de automatización">
-            <span>Cliente</span><i></i><span>WhatsApp / Web</span><i></i><span>Bot / IA</span><i></i><span>Clasificación</span><i></i><span>Registro</span><i></i><span>Seguimiento</span><i></i><span>Resultado</span>
+            <em>Input received</em><span>Cliente</span><i></i><span>WhatsApp / Web</span><i></i><span>Bot / IA</span><i></i><span>Clasificación</span><i></i><span>Registro</span><i></i><span>Seguimiento</span><i></i><span>Resultado</span><em>Lead classified</em><em>Data stored</em><em>Notification sent</em>
           </div>
         </section>
 
@@ -143,7 +149,7 @@
             <h2>De conversación a acción medible.</h2>
             <p>Cada interacción puede activar registros, clasificación de leads, notificaciones y seguimiento comercial.</p>
             <ul class="status-list">
-              <li>Contacto registrado</li><li>Lead clasificado</li><li>Notificación enviada</li><li>Seguimiento activado</li>
+              <li><span>Contacto registrado</span></li><li><span>Lead clasificado</span></li><li><span>Notificación enviada</span></li><li><span>Seguimiento activado</span></li>
             </ul>
           </div>
         </section>
@@ -158,7 +164,7 @@
         <section class="final-cta section scene reveal" data-scene="cta">
           <h2>Tu empresa no necesita más herramientas sueltas. Necesita un sistema digital que trabaje por ti.</h2>
           <p>Con Arkaius Digital puedes modernizar tu atención, automatizar procesos y construir una presencia digital más sólida.</p>
-          <div class="hero__actions"><a class="btn btn--primary" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Hablar por WhatsApp</a><a class="btn btn--ghost" href="mailto:hola@arkaius.digital">Solicitar asesoría</a></div>
+          <div class="hero__actions"><a class="btn btn--primary magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Hablar por WhatsApp</a><a class="btn btn--ghost magnetic" href="mailto:hola@arkaius.digital">Solicitar asesoría</a></div>
         </section>
       </main>
 
