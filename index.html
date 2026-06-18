@@ -3,175 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Arkaius Digital crea bots con IA, automatizaciones, páginas web, soporte TI, redes y soluciones digitales para empresas, emprendedores y pymes." />
-    <title>Arkaius Digital | Plataforma de automatización e IA</title>
+    <meta name="description" content="Arkaius Digital SpA ofrece soluciones tecnológicas para empresas, pymes y emprendedores: desarrollo web, automatización con IA, bots, consultoría informática, redes y soporte tecnológico en Chile." />
+    <meta name="keywords" content="consultoría informática, desarrollo web, bots con IA, automatización, redes informáticas, soporte tecnológico, páginas web con IA, Chile, Arkaius Digital" />
+    <title>Arkaius Digital SpA — Tecnología, IA, Redes y Desarrollo Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="modo-azul">
     <div class="loader" aria-label="Cargando Arkaius Digital">
-      <div class="loader__console" aria-hidden="true">
-        <span>ARKAIUS</span><span>AI SYSTEMS</span><span>BOT ENGINE</span><span>WEB AUTOMATION</span><span>NETWORK CORE</span><span>SUPPORT ONLINE</span>
-      </div>
-      <div class="loader__scan" aria-hidden="true"></div>
-      <div class="loader__core">
-        <svg class="loader__mark" viewBox="0 0 120 120" role="img" aria-label="Isotipo Arkaius">
-          <path d="M18 98 L60 18 L102 98" />
-          <path d="M39 72 H81" />
-          <path d="M30 98 L48 98" />
-          <path d="M72 98 L90 98" />
-        </svg>
-        <p>ARKAIUS DIGITAL</p>
-        <span>INITIALIZING ARKAIUS SYSTEMS</span>
-        <span class="loader__status" aria-live="polite">AI Core Online</span>
-        <div class="loader__sparks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="loader__progress"><b>//01</b><b>//24</b><b>//87</b><b>&gt;&gt;&gt;</b></div>
-      </div>
+      <div class="loader__mark" aria-hidden="true">A</div>
+      <p>Arkaius Digital</p>
+      <span>Preparando experiencia</span>
+      <div class="loader__line"><i></i></div>
     </div>
 
-    <div id="stage" data-scene="hero">
+    <div id="stage">
       <canvas id="stage-canvas" aria-hidden="true"></canvas>
       <div class="stage__gradient" aria-hidden="true"></div>
       <div class="stage__grid" aria-hidden="true"></div>
       <div class="stage__noise" aria-hidden="true"></div>
-      <div class="stage__scanlines" aria-hidden="true"></div>
-      <div class="stage__glow stage__glow--mouse" aria-hidden="true"></div>
-      <div class="stage__glow stage__glow--lens" aria-hidden="true"></div>
       <div class="cursor-glow" aria-hidden="true"></div>
 
-      <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido sutil">SOUND OFF</button>
-
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="Arkaius Digital inicio">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de Arkaius Digital">
           <span class="brand__mark">A</span>
-          <span>ARKAIUS_SYS</span>
+          <span>Arkaius Digital</span>
         </a>
         <nav class="nav" aria-label="Navegación principal">
-          <a href="#servicios">/ SERVICES</a>
-          <a href="#flujo">/ AUTOMATION</a>
-          <a href="#proceso">/ PROCESS</a>
-          <a href="#demo">/ DEMO</a>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#enfoque">Enfoque</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#valores">Valores</a>
+          <a href="#contacto">Contacto</a>
         </nav>
-        <a class="header-cta magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">STATUS: ONLINE</a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Cambiar a Modo Negro">Modo Negro</button>
+          <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido sutil">Sonido desactivado</button>
+        </div>
       </header>
 
-      <main id="top" class="stage__content">
-        <section class="hero section scene" data-scene="hero">
-          <div class="hero__content reveal" data-depth="0.35">
-            <span class="eyebrow">ARKAIUS_OS // COMMAND INTERFACE</span>
-            <h1>Tecnología que automatiza, conecta y escala tu empresa.</h1>
-            <p>Creamos bots con IA, automatizaciones, páginas web y soluciones tecnológicas para empresas que quieren avanzar con herramientas modernas, eficientes y bien implementadas.</p>
+      <main class="stage__content">
+        <section class="hero section scene" id="inicio" data-scene="inicio">
+          <div class="hero__content reveal" data-depth="0.22">
+            <span class="eyebrow">Disponible para nuevos proyectos</span>
+            <h1>Soluciones digitales con IA, redes y desarrollo web.</h1>
+            <p>Ayudamos a negocios, profesionales y pymes a digitalizar sus servicios, automatizar procesos y fortalecer su infraestructura tecnológica con soluciones claras, modernas y escalables.</p>
             <div class="hero__actions">
-              <a class="btn btn--primary magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Solicitar asesoría</a>
-              <a class="btn btn--ghost magnetic" href="#servicios">Ver servicios</a>
+              <a class="btn btn--primary magnetic" href="#servicios">Explorar soluciones</a>
+              <a class="btn btn--secondary magnetic" href="#contacto">Agendar diagnóstico</a>
             </div>
-            <div class="hero__stats" aria-label="Beneficios principales">
-              <span><b>[ RESPONSE ]</b> 24/7 atención automatizada</span>
-              <span><b>[ AI_CORE ]</b> IA aplicada a procesos reales</span>
-              <span><b>[ WEB_SYS ]</b> Web orientada a conversión</span>
+            <div class="hero__chips" aria-label="Servicios destacados">
+              <span>Desarrollo web</span>
+              <span>Bots con IA</span>
+              <span>Redes informáticas</span>
+              <span>Automatización</span>
+              <span>Soporte TI</span>
             </div>
           </div>
-          <div class="hero__visual reveal" data-depth="0.75">
-            <div class="command-card command-card--main tilt-card">
-              <div class="card-top"><span></span><span></span><span></span><em>CORE_MONITOR</em></div>
-              <svg class="core-lines" viewBox="0 0 420 420" aria-hidden="true">
-                <path d="M210 38 C304 38 382 116 382 210 S304 382 210 382 38 304 38 210 116 38 210 38" />
-                <path d="M86 210 H162 M258 210 H334 M210 86 V162 M210 258 V334" />
-                <path d="M122 122 L168 168 M252 252 L298 298 M298 122 L252 168 M168 252 L122 298" />
-              </svg>
-              <div class="hero-links" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="digital-core"><i></i><span></span><span></span><span></span></div>
-              <div class="signal signal--one" data-status="AI module active">[ IA ]</div>
-              <div class="signal signal--two" data-status="Bot flow ready">[ BOTS ]</div>
-              <div class="signal signal--three" data-status="Web layer deployed">[ WEB ]</div>
-              <div class="signal signal--four" data-status="Network signal stable">[ NETWORK ]</div>
-              <div class="signal signal--five" data-status="Support channel online">[ SUPPORT ]</div>
-              <div class="signal signal--six" data-status="Automation route synced">[ AUTOMATION ]</div>
+          <div class="hero__visual reveal" data-depth="0.38">
+            <div class="solution-panel tilt-card">
+              <div class="panel__header"><span>Vista de solución</span><b>Proyecto en marcha</b></div>
+              <div class="panel__body">
+                <div class="panel__metric"><span>Atención digital</span><strong>24/7</strong></div>
+                <div class="panel__metric"><span>Procesos conectados</span><strong>IA + Web</strong></div>
+                <div class="panel__metric"><span>Soporte y redes</span><strong>Estable</strong></div>
+              </div>
+              <div class="panel__flow"><i></i><i></i><i></i></div>
             </div>
           </div>
         </section>
 
-        <section class="section services scene" id="servicios" data-scene="services">
-          <div class="section-heading reveal terminal-heading">
-            <span class="eyebrow">/ MODULES</span>
-            <h2>Soluciones digitales para operar mejor, responder más rápido y vender con más claridad.</h2>
+        <section class="section about scene" id="sobre-arkaius" data-scene="sobre">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Sobre Arkaius</span>
+            <h2>Tecnología aplicada a negocios reales.</h2>
+          </div>
+          <div class="about__grid">
+            <article class="text-panel reveal">
+              <p>Arkaius Digital SpA nace para acercar la tecnología a empresas, pymes y emprendedores que necesitan soluciones prácticas, modernas y fáciles de implementar.</p>
+              <p>Integramos desarrollo web, automatización con inteligencia artificial, consultoría informática, redes y soporte tecnológico para ayudar a que cada negocio trabaje mejor, responda más rápido y tome decisiones con mayor claridad.</p>
+              <p>Trabajamos de forma directa, cercana y estratégica: analizamos lo que necesitas, proponemos una solución realista y construimos herramientas pensadas para el uso diario, no solo para verse bien.</p>
+            </article>
+            <aside class="insight-card reveal">
+              <span>Enfoque</span>
+              <strong>Soluciones claras, útiles y sostenibles.</strong>
+              <p>Menos herramientas sueltas. Más sistemas simples, conectados y pensados para la operación real.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section services scene" id="servicios" data-scene="servicios">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Servicios</span>
+            <h2>Soluciones principales para modernizar tu operación digital.</h2>
           </div>
           <div class="service-grid stagger-group">
-            <article class="glass-card reveal tilt-card" data-code="[ AI_MODULE ] ACTIVE"><span class="icon">AI</span><h3>Bots con IA</h3><p>Automatizamos conversaciones por WhatsApp y otros canales para responder, captar clientes y mejorar la atención.</p></article>
-            <article class="glass-card reveal tilt-card" data-code="[ AUTO_ENGINE ] READY"><span class="icon">AU</span><h3>Automatización de procesos</h3><p>Conectamos herramientas, formularios, planillas y flujos de trabajo para ahorrar tiempo y reducir tareas repetitivas.</p></article>
-            <article class="glass-card reveal tilt-card" data-code="[ WEB_SYSTEM ] DEPLOYED"><span class="icon">WB</span><h3>Desarrollo web</h3><p>Creamos páginas modernas, rápidas y orientadas a conversión para negocios, marcas y empresas.</p></article>
-            <article class="glass-card reveal tilt-card" data-code="[ NETWORK_CORE ] STABLE"><span class="icon">NW</span><h3>Redes e infraestructura TI</h3><p>Implementamos, configuramos y optimizamos entornos tecnológicos para un funcionamiento más estable y seguro.</p></article>
-            <article class="glass-card reveal tilt-card" data-code="[ SUPPORT_NODE ] ONLINE"><span class="icon">SP</span><h3>Soporte tecnológico</h3><p>Brindamos asistencia técnica, soluciones prácticas y acompañamiento para mantener tus operaciones funcionando.</p></article>
-            <article class="glass-card reveal tilt-card" data-code="[ STRATEGY_LOG ] OPEN"><span class="icon">CS</span><h3>Consultoría digital</h3><p>Te ayudamos a definir e implementar soluciones tecnológicas según las necesidades reales de tu negocio.</p></article>
+            <article class="service-card reveal tilt-card"><h3>Desarrollo Web Profesional</h3><p>Sitios modernos, rápidos y responsivos para presentar tu negocio, captar clientes y entregar una experiencia clara.</p><b>Desde $300.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Landing Pages</h3><p>Páginas enfocadas en conversión para campañas, servicios, emprendimientos y validación de ofertas.</p><b>Desde $150.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Automatización con IA</h3><p>Flujos que conectan formularios, WhatsApp, correo y tareas repetitivas para ahorrar tiempo y mejorar respuesta.</p><b>Desde $180.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Bots y Asistentes Virtuales</h3><p>Asistentes para atención, captación de consultas, clasificación de leads y respuestas frecuentes.</p><b>Desde $200.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Redes e Infraestructura</h3><p>Implementación, revisión y mejora de entornos tecnológicos para operar de forma más estable y segura.</p><b>A evaluar según proyecto</b></article>
+            <article class="service-card reveal tilt-card"><h3>Soporte y Consultoría TI</h3><p>Acompañamiento técnico, mantención, diagnóstico y orientación para decisiones tecnológicas del negocio.</p><b>Desde $50.000 CLP / mes</b></article>
+            <article class="service-card service-card--wide reveal tilt-card"><h3>Soluciones a medida</h3><p>Diseñamos e implementamos herramientas digitales según tus procesos, presupuesto, tiempos y objetivos comerciales.</p><b>Cotización personalizada</b></article>
           </div>
         </section>
 
-        <section class="section flow scene" id="flujo" data-scene="automation">
-          <div class="flow__copy reveal"><span class="eyebrow">/ PIPELINE</span><h2>Convertimos procesos sueltos en sistemas inteligentes.</h2><p>Diseñamos soluciones que conectan atención, automatización, datos y ejecución para que tu negocio funcione con más orden, rapidez y eficiencia.</p></div>
-          <div class="flowline reveal" aria-label="Flujo de automatización">
-            <em>Input received</em><span>Cliente</span><i></i><span>WhatsApp / Web</span><i></i><span>Bot / IA</span><i></i><span>Clasificación</span><i></i><span>Registro</span><i></i><span>Seguimiento</span><i></i><span>Resultado</span><em>Lead classified</em><em>Data stored</em><em>Notification sent</em>
+        <section class="section approach scene" id="enfoque" data-scene="enfoque">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Enfoque de trabajo</span>
+            <h2>Construimos una base digital ordenada para que tu negocio avance.</h2>
+          </div>
+          <div class="approach-grid">
+            <article class="approach-card reveal"><span>01</span><h3>Presencia digital</h3><p>Tu marca necesita una web clara, confiable y preparada para convertir visitas en oportunidades reales.</p></article>
+            <article class="approach-card reveal"><span>02</span><h3>Procesos automatizados</h3><p>Automatizamos tareas repetitivas y conectamos canales para mejorar respuesta y seguimiento.</p></article>
+            <article class="approach-card reveal"><span>03</span><h3>Infraestructura tecnológica</h3><p>Revisamos redes, soporte e implementación técnica para que tus herramientas funcionen con estabilidad.</p></article>
           </div>
         </section>
 
-        <section class="section use-cases scene" data-scene="services">
-          <div class="section-heading reveal"><span class="eyebrow">/ DEPLOY TARGETS</span><h2>Soluciones adaptadas a negocios que necesitan vender mejor, responder más rápido y operar con más eficiencia.</h2></div>
-          <div class="case-grid stagger-group">
-            <article class="mini-card reveal"><h3>Empresas de servicios</h3><p>Captación, agenda, seguimiento y soporte ordenado.</p></article>
-            <article class="mini-card reveal"><h3>Consultoras</h3><p>Flujos comerciales, formularios y automatización documental.</p></article>
-            <article class="mini-card reveal"><h3>Negocios locales</h3><p>Atención por WhatsApp, presencia web y respuestas rápidas.</p></article>
-            <article class="mini-card reveal"><h3>Profesionales independientes</h3><p>Marca digital, leads y gestión simple de solicitudes.</p></article>
-            <article class="mini-card reveal"><h3>Marcas digitales</h3><p>Sitios premium, embudos y sistemas de contacto claros.</p></article>
-            <article class="mini-card reveal"><h3>Operaciones en crecimiento</h3><p>Automatización de atención, procesos internos y datos.</p></article>
+        <section class="section process scene" id="proceso" data-scene="proceso">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Proceso</span>
+            <h2>Un método simple para implementar tecnología sin complicaciones.</h2>
+          </div>
+          <div class="process-list stagger-group">
+            <article class="process-step reveal"><b>01</b><div><h3>Diagnóstico</h3><p>Entendemos tu negocio, tus problemas actuales y las oportunidades reales de mejora.</p></div></article>
+            <article class="process-step reveal"><b>02</b><div><h3>Propuesta</h3><p>Definimos una solución clara, con alcance, prioridades, tiempos y valores referenciales.</p></div></article>
+            <article class="process-step reveal"><b>03</b><div><h3>Implementación</h3><p>Desarrollamos, configuramos, integramos y probamos la solución antes de entregarla.</p></div></article>
+            <article class="process-step reveal"><b>04</b><div><h3>Soporte y mejora</h3><p>Acompañamos el uso real, ajustamos detalles y proponemos mejoras cuando sea necesario.</p></div></article>
           </div>
         </section>
 
-        <section class="section process scene" id="proceso" data-scene="automation">
-          <div class="section-heading reveal"><span class="eyebrow">/ EXECUTION LOG</span><h2>Un método claro para pasar de la idea al sistema funcionando.</h2></div>
-          <div class="timeline stagger-group">
-            <article class="step reveal"><b>01</b><h3>Diagnóstico</h3><p>Analizamos tu necesidad, tu operación actual y detectamos oportunidades reales de mejora.</p></article>
-            <article class="step reveal"><b>02</b><h3>Diseño de solución</h3><p>Definimos la mejor combinación de web, automatización, bot o soporte tecnológico para tu caso.</p></article>
-            <article class="step reveal"><b>03</b><h3>Desarrollo e implementación</h3><p>Construimos la solución y conectamos los sistemas necesarios.</p></article>
-            <article class="step reveal"><b>04</b><h3>Pruebas y ajustes</h3><p>Validamos que todo funcione correctamente y optimizamos detalles.</p></article>
-            <article class="step reveal"><b>05</b><h3>Entrega y soporte</h3><p>Te acompañamos para que la solución funcione bien en el uso real.</p></article>
+        <section class="section pricing scene" id="valores" data-scene="valores">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Valores referenciales</span>
+            <h2>Planes claros para comenzar con una solución tecnológica real.</h2>
           </div>
+          <div class="price-grid stagger-group">
+            <article class="price-card reveal"><span>Inicio Digital</span><h3>Desde $150.000 CLP</h3><p>Ideal para emprendedores o negocios que necesitan comenzar con una presencia profesional.</p><ul><li>Landing page o sitio simple</li><li>Diseño responsive</li><li>Formulario o botón de contacto</li><li>Botón de WhatsApp</li><li>Estructura básica de SEO</li></ul></article>
+            <article class="price-card price-card--featured reveal"><span>Negocio Digital</span><h3>Desde $300.000 CLP</h3><p>Plan más solicitado. Para empresas y pymes que necesitan una solución más completa, ordenada y escalable.</p><ul><li>Sitio web profesional</li><li>3 a 5 secciones</li><li>Formulario de contacto</li><li>Integraciones básicas</li><li>Google Analytics o medición inicial</li><li>1 mes de soporte</li></ul></article>
+            <article class="price-card reveal"><span>Automatización / IA</span><h3>Desde $180.000 CLP</h3><p>Para negocios que quieren ahorrar tiempo, responder mejor y automatizar tareas repetitivas.</p><ul><li>Flujo automatizado inicial</li><li>Bot o asistente básico</li><li>Integración con formulario, WhatsApp o correo</li><li>Configuración personalizada</li><li>Pruebas y ajustes incluidos</li></ul></article>
+          </div>
+          <p class="pricing-note reveal">Los valores publicados son referenciales. Todo proyecto se cotiza según alcance, funcionalidades, integraciones, tiempos de entrega, soporte requerido y condiciones técnicas.</p>
         </section>
 
-        <section class="section demo scene" id="demo" data-scene="demo">
-          <div class="demo__phone reveal tilt-card">
-            <div class="phone-top">WhatsApp Bot · Arkaius</div>
-            <div class="bubble bubble--client">Hola, necesito información sobre sus servicios.</div>
-            <div class="bubble bubble--bot">¡Hola! Claro, puedo ayudarte. ¿Qué necesitas hoy?<br>1. Página web<br>2. Automatización<br>3. Bot para WhatsApp<br>4. Soporte TI</div>
-          </div>
-          <div class="demo__panel reveal">
-            <span class="eyebrow">/ LIVE SIMULATION</span>
-            <h2>De conversación a acción medible.</h2>
-            <p>Cada interacción puede activar registros, clasificación de leads, notificaciones y seguimiento comercial.</p>
-            <ul class="status-list">
-              <li><span>Contacto registrado</span></li><li><span>Lead clasificado</span></li><li><span>Notificación enviada</span></li><li><span>Seguimiento activado</span></li>
-            </ul>
-          </div>
+        <section class="section final-cta scene reveal" data-scene="contacto">
+          <h2>¿Tu negocio necesita una solución tecnológica real?</h2>
+          <p>Conversemos sobre tu situación actual y veamos qué solución digital puede ayudarte a trabajar mejor.</p>
+          <a class="btn btn--primary magnetic" href="#contacto">Agendar diagnóstico</a>
         </section>
 
-        <section class="section differentiators scene" data-scene="services">
-          <div class="section-heading reveal"><span class="eyebrow">/ SYSTEM ADVANTAGES</span><h2>Más que servicios, construimos soluciones.</h2></div>
-          <div class="diff-grid stagger-group">
-            <span class="reveal">Enfoque práctico</span><span class="reveal">Soluciones personalizadas</span><span class="reveal">Visión tecnológica moderna</span><span class="reveal">Automatización útil, no decorativa</span><span class="reveal">Atención cercana</span><span class="reveal">Implementación para negocios reales</span>
+        <section class="section contact scene" id="contacto" data-scene="contacto">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Contacto</span>
+            <h2>Cuéntanos qué necesitas implementar.</h2>
+            <p>Completa el formulario y se abrirá WhatsApp con un mensaje preparado. Reemplaza el número en el código cuando tengas el contacto real.</p>
           </div>
-        </section>
-
-        <section class="final-cta section scene reveal" data-scene="cta">
-          <h2>Tu empresa no necesita más herramientas sueltas. Necesita un sistema digital que trabaje por ti.</h2>
-          <p>Con Arkaius Digital puedes modernizar tu atención, automatizar procesos y construir una presencia digital más sólida.</p>
-          <div class="hero__actions"><a class="btn btn--primary magnetic" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">Hablar por WhatsApp</a><a class="btn btn--ghost magnetic" href="mailto:hola@arkaius.digital">Solicitar asesoría</a></div>
+          <div class="contact-grid">
+            <form class="contact-form reveal" id="contact-form">
+              <label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required /></label>
+              <label>Correo<input name="correo" type="email" placeholder="tu@correo.cl" required /></label>
+              <label>Servicio de interés<select name="servicio" required><option value="">Selecciona una opción</option><option>Landing Page</option><option>Sitio Web Profesional</option><option>Automatización con IA</option><option>Bot o asistente virtual</option><option>Redes e infraestructura</option><option>Consultoría informática</option><option>Soporte / Mantención TI</option><option>Otro / No lo sé aún</option></select></label>
+              <label>Mensaje<textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente qué necesitas" required></textarea></label>
+              <button class="btn btn--primary" type="submit">Enviar por WhatsApp</button>
+            </form>
+            <aside class="contact-card reveal">
+              <h3>Datos de contacto</h3>
+              <a href="mailto:contacto@arkaius.cl">contacto@arkaius.cl</a>
+              <a href="https://wa.me/56900000000" target="_blank" rel="noreferrer">+56 9 0000 0000</a>
+              <p>Atendemos empresas, profesionales, pymes y emprendedores que necesitan implementar tecnología con claridad.</p>
+            </aside>
+          </div>
         </section>
       </main>
 
       <footer class="footer">
-        <div><a class="brand" href="#top"><span class="brand__mark">A</span><span>ARKAIUS_SYS</span></a><p>Automatización, IA, bots, desarrollo web, soporte TI y soluciones digitales para empresas modernas.</p></div>
-        <nav><a href="#servicios">Servicios</a><a href="#flujo">Sistema</a><a href="#proceso">Proceso</a><a href="#demo">Demo</a></nav>
-        <div><b>Contacto</b><a href="https://wa.me/0000000000">WhatsApp</a><a href="mailto:hola@arkaius.digital">hola@arkaius.digital</a><a href="#">LinkedIn</a></div>
+        <div><a class="brand" href="#inicio"><span class="brand__mark">A</span><span>Arkaius Digital</span></a><p>Desarrollo web, IA, automatización, redes y soporte tecnológico para negocios en Chile.</p></div>
+        <nav><a href="#servicios">Servicios</a><a href="#enfoque">Enfoque</a><a href="#proceso">Proceso</a><a href="#valores">Valores</a><a href="#contacto">Contacto</a></nav>
+        <div><b>Contacto</b><a href="https://wa.me/56900000000">WhatsApp</a><a href="mailto:contacto@arkaius.cl">contacto@arkaius.cl</a></div>
       </footer>
     </div>
     <script src="script.js"></script>
