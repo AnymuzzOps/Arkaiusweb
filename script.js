@@ -4,11 +4,11 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
 const scenePalette = {
-  hero: { a: [82, 229, 255], b: [47, 123, 255] },
-  services: { a: [40, 108, 255], b: [10, 25, 80] },
-  automation: { a: [82, 229, 255], b: [18, 188, 255] },
-  demo: { a: [57, 255, 199], b: [50, 145, 255] },
-  cta: { a: [141, 92, 255], b: [47, 123, 255] },
+  hero: { a: [41, 207, 255], b: [8, 123, 255] },
+  services: { a: [31, 176, 232], b: [4, 54, 116] },
+  automation: { a: [55, 222, 255], b: [7, 102, 184] },
+  demo: { a: [41, 207, 255], b: [0, 82, 146] },
+  cta: { a: [76, 188, 255], b: [18, 72, 164] },
 };
 let currentScene = 'hero';
 function clonePalette(palette) {
