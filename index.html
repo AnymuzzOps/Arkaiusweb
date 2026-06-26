@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arkaius Digital SpA ofrece soluciones tecnológicas para empresas, pymes y emprendedores: desarrollo web, automatización con IA, bots, consultoría informática, redes y soporte tecnológico en Chile." />
+    <meta name="keywords" content="consultoría informática, desarrollo web, bots con IA, automatización, redes informáticas, soporte tecnológico, páginas web con IA, Chile, Arkaius Digital" />
+    <title>Arkaius Digital SpA — Tecnología, IA, Redes y Desarrollo Web</title>
+    <script>document.documentElement.dataset.apariencia = localStorage.getItem("arkaiusApariencia") || (window.matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "oscuro");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-label="Cargando Arkaius Digital">
+      <div class="loader__mark" aria-hidden="true">A</div>
+      <p>Arkaius Digital</p>
+      <span>Cargando</span>
+      <div class="loader__line"><i></i></div>
+    </div>
+
+    <div id="stage">
+      <canvas id="stage-canvas" aria-hidden="true"></canvas>
+      <div class="stage__gradient" aria-hidden="true"></div>
+      <div class="stage__grid" aria-hidden="true"></div>
+      <div class="stage__noise" aria-hidden="true"></div>
+      <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de Arkaius Digital">
+          <span class="brand__mark">A</span>
+          <span>Arkaius Digital</span>
+        </a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#enfoque">Enfoque</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#valores">Valores</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle icon-control" type="button" aria-label="Cambiar a modo claro" title="Cambiar apariencia"><span aria-hidden="true">☾</span></button>
+          <button class="sound-toggle icon-control" type="button" aria-pressed="false" aria-label="Activar sonido" title="Activar sonido"><span aria-hidden="true">♪</span></button>
+          <button class="menu-toggle icon-control" type="button" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+        </div>
+      </header>
+
+      <main class="stage__content">
+        <section class="hero section scene" id="inicio" data-scene="inicio">
+          <div class="hero__content reveal" data-depth="0.22">
+            <span class="eyebrow">Disponible para nuevos proyectos</span>
+            <h1>Soluciones digitales con IA, redes y desarrollo web.</h1>
+            <p>Ayudamos a negocios, profesionales y pymes a digitalizar sus servicios, automatizar procesos y fortalecer su infraestructura tecnológica con soluciones claras, modernas y escalables.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary magnetic" href="#servicios">Explorar soluciones</a>
+              <a class="btn btn--secondary magnetic" href="#contacto">Agendar diagnóstico</a>
+            </div>
+            <div class="hero__capabilities" aria-label="Servicios destacados">
+              <span>Desarrollo web</span>
+              <span>Bots con IA</span>
+              <span>Redes informáticas</span>
+              <span>Automatización</span>
+              <span>Soporte TI</span>
+            </div>
+          </div>
+          <div class="hero__visual reveal" data-depth="0.28" aria-hidden="true">
+            <div class="digital-orbit">
+              <svg class="digital-orbit__threads" viewBox="0 0 560 560" focusable="false">
+                <path d="M82 284 C156 126 390 120 478 276 C410 420 168 438 82 284Z" />
+                <path d="M142 170 C250 214 338 344 424 398" />
+                <path d="M124 390 C224 318 314 226 446 164" />
+                <path d="M280 76 C328 184 322 360 280 484" />
+              </svg>
+              <div class="digital-orbit__halo"></div>
+              <div class="digital-orbit__core"><i></i><i></i><i></i></div>
+              <span class="orbit-particle orbit-particle--one"></span>
+              <span class="orbit-particle orbit-particle--two"></span>
+              <span class="orbit-particle orbit-particle--three"></span>
+              <span class="orbit-particle orbit-particle--four"></span>
+              <span class="orbit-particle orbit-particle--five"></span>
+              <span class="orbit-particle orbit-particle--six"></span>
+              <span class="orbit-point orbit-point--one"></span>
+              <span class="orbit-point orbit-point--two"></span>
+              <span class="orbit-point orbit-point--three"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section about scene" id="sobre-arkaius" data-scene="sobre">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Sobre Arkaius</span>
+            <h2>Tecnología aplicada a negocios reales.</h2>
+          </div>
+          <div class="about__grid">
+            <article class="text-panel reveal">
+              <p>Arkaius Digital SpA nace para acercar la tecnología a empresas, pymes y emprendedores que necesitan soluciones prácticas, modernas y fáciles de implementar.</p>
+              <p>Integramos desarrollo web, automatización con inteligencia artificial, consultoría informática, redes y soporte tecnológico para ayudar a que cada negocio trabaje mejor, responda más rápido y tome decisiones con mayor claridad.</p>
+              <p>Trabajamos de forma directa, cercana y estratégica: analizamos lo que necesitas, proponemos una solución realista y construimos herramientas pensadas para el uso diario, no solo para verse bien.</p>
+            </article>
+            <aside class="insight-card reveal">
+              <span>Enfoque</span>
+              <strong>Soluciones claras, útiles y sostenibles.</strong>
+              <p>Menos herramientas sueltas. Más sistemas simples, conectados y pensados para la operación real.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section services scene" id="servicios" data-scene="servicios">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Servicios</span>
+            <h2>Soluciones principales para modernizar tu operación digital.</h2>
+          </div>
+          <div class="service-grid stagger-group">
+            <article class="service-card reveal tilt-card"><h3>Desarrollo Web Profesional</h3><p>Sitios modernos, rápidos y responsivos para presentar tu negocio, captar clientes y entregar una experiencia clara.</p><b>Desde $300.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Landing Pages</h3><p>Páginas enfocadas en conversión para campañas, servicios, emprendimientos y validación de ofertas.</p><b>Desde $150.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Automatización con IA</h3><p>Flujos que conectan formularios, WhatsApp, correo y tareas repetitivas para ahorrar tiempo y mejorar respuesta.</p><b>Desde $180.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Bots y Asistentes Virtuales</h3><p>Asistentes para atención, captación de consultas, clasificación de leads y respuestas frecuentes.</p><b>Desde $200.000 CLP</b></article>
+            <article class="service-card reveal tilt-card"><h3>Redes e Infraestructura</h3><p>Implementación, revisión y mejora de entornos tecnológicos para operar de forma más estable y segura.</p><b>A evaluar según proyecto</b></article>
+            <article class="service-card reveal tilt-card"><h3>Soporte y Consultoría TI</h3><p>Acompañamiento técnico, mantención, diagnóstico y orientación para decisiones tecnológicas del negocio.</p><b>Desde $50.000 CLP / mes</b></article>
+            <article class="service-card service-card--wide reveal tilt-card"><h3>Soluciones a medida</h3><p>Diseñamos e implementamos herramientas digitales según tus procesos, presupuesto, tiempos y objetivos comerciales.</p><b>Cotización personalizada</b></article>
+          </div>
+        </section>
+
+        <section class="section approach scene" id="enfoque" data-scene="enfoque">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Enfoque de trabajo</span>
+            <h2>Construimos una base digital ordenada para que tu negocio avance.</h2>
+          </div>
+          <div class="approach-grid">
+            <article class="approach-card reveal"><span>01</span><h3>Presencia digital</h3><p>Tu marca necesita una web clara, confiable y preparada para convertir visitas en oportunidades reales.</p></article>
+            <article class="approach-card reveal"><span>02</span><h3>Procesos automatizados</h3><p>Automatizamos tareas repetitivas y conectamos canales para mejorar respuesta y seguimiento.</p></article>
+            <article class="approach-card reveal"><span>03</span><h3>Infraestructura tecnológica</h3><p>Revisamos redes, soporte e implementación técnica para que tus herramientas funcionen con estabilidad.</p></article>
+          </div>
+        </section>
+
+        <section class="section process scene" id="proceso" data-scene="proceso">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Proceso</span>
+            <h2>Un método simple para implementar tecnología sin complicaciones.</h2>
+          </div>
+          <div class="process-list stagger-group">
+            <article class="process-step reveal"><b>01</b><div><h3>Diagnóstico</h3><p>Entendemos tu negocio, tus problemas actuales y las oportunidades reales de mejora.</p></div></article>
+            <article class="process-step reveal"><b>02</b><div><h3>Propuesta</h3><p>Definimos una solución clara, con alcance, prioridades, tiempos y valores referenciales.</p></div></article>
+            <article class="process-step reveal"><b>03</b><div><h3>Implementación</h3><p>Desarrollamos, configuramos, integramos y probamos la solución antes de entregarla.</p></div></article>
+            <article class="process-step reveal"><b>04</b><div><h3>Soporte y mejora</h3><p>Acompañamos el uso real, ajustamos detalles y proponemos mejoras cuando sea necesario.</p></div></article>
+          </div>
+        </section>
+
+        <section class="section pricing scene" id="valores" data-scene="valores">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Valores referenciales</span>
+            <h2>Planes claros para comenzar con una solución tecnológica real.</h2>
+          </div>
+          <div class="price-grid stagger-group">
+            <article class="price-card reveal"><span>Inicio Digital</span><h3>Desde $150.000 CLP</h3><p>Ideal para emprendedores o negocios que necesitan comenzar con una presencia profesional.</p><ul><li>Landing page o sitio simple</li><li>Diseño responsive</li><li>Formulario o botón de contacto</li><li>Botón de WhatsApp</li><li>Estructura básica de SEO</li></ul></article>
+            <article class="price-card price-card--featured reveal"><span>Negocio Digital</span><h3>Desde $300.000 CLP</h3><p>Plan más solicitado. Para empresas y pymes que necesitan una solución más completa, ordenada y escalable.</p><ul><li>Sitio web profesional</li><li>3 a 5 secciones</li><li>Formulario de contacto</li><li>Integraciones básicas</li><li>Google Analytics o medición inicial</li><li>1 mes de soporte</li></ul></article>
+            <article class="price-card reveal"><span>Automatización / IA</span><h3>Desde $180.000 CLP</h3><p>Para negocios que quieren ahorrar tiempo, responder mejor y automatizar tareas repetitivas.</p><ul><li>Flujo automatizado inicial</li><li>Bot o asistente básico</li><li>Integración con formulario, WhatsApp o correo</li><li>Configuración personalizada</li><li>Pruebas y ajustes incluidos</li></ul></article>
+          </div>
+          <p class="pricing-note reveal">Los valores publicados son referenciales. Todo proyecto se cotiza según alcance, funcionalidades, integraciones, tiempos de entrega, soporte requerido y condiciones técnicas.</p>
+        </section>
+
+        <section class="section final-cta scene reveal" data-scene="contacto">
+          <h2>¿Tu negocio necesita una solución tecnológica real?</h2>
+          <p>Conversemos sobre tu situación actual y veamos qué solución digital puede ayudarte a trabajar mejor.</p>
+          <a class="btn btn--primary magnetic" href="#contacto">Agendar diagnóstico</a>
+        </section>
+
+        <section class="section contact scene" id="contacto" data-scene="contacto">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Contacto</span>
+            <h2>Cuéntanos qué necesitas implementar.</h2>
+            <p>Completa el formulario y se abrirá WhatsApp con un mensaje preparado. Reemplaza el número en el código cuando tengas el contacto real.</p>
+          </div>
+          <div class="contact-grid">
+            <form class="contact-form reveal" id="contact-form">
+              <label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required /></label>
+              <label>Correo<input name="correo" type="email" placeholder="tu@correo.cl" required /></label>
+              <label>Servicio de interés<select name="servicio" required><option value="">Selecciona una opción</option><option>Landing Page</option><option>Sitio Web Profesional</option><option>Automatización con IA</option><option>Bot o asistente virtual</option><option>Redes e infraestructura</option><option>Consultoría informática</option><option>Soporte / Mantención TI</option><option>Otro / No lo sé aún</option></select></label>
+              <label>Mensaje<textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente qué necesitas" required></textarea></label>
+              <button class="btn btn--primary" type="submit">Enviar por WhatsApp</button>
+            </form>
+            <aside class="contact-card reveal">
+              <h3>Datos de contacto</h3>
+              <a href="mailto:contacto@arkaius.cl">contacto@arkaius.cl</a>
+              <a href="https://wa.me/56900000000" target="_blank" rel="noreferrer">+56 9 0000 0000</a>
+              <p>Atendemos empresas, profesionales, pymes y emprendedores que necesitan implementar tecnología con claridad.</p>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div><a class="brand" href="#inicio"><span class="brand__mark">A</span><span>Arkaius Digital</span></a><p>Desarrollo web, IA, automatización, redes y soporte tecnológico para negocios en Chile.</p></div>
+        <nav><a href="#servicios">Servicios</a><a href="#enfoque">Enfoque</a><a href="#proceso">Proceso</a><a href="#valores">Valores</a><a href="#contacto">Contacto</a></nav>
+        <div><b>Contacto</b><a href="https://wa.me/56900000000">WhatsApp</a><a href="mailto:contacto@arkaius.cl">contacto@arkaius.cl</a></div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
