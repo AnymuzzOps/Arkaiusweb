@@ -21,23 +21,35 @@ themeToggle?.addEventListener('click', () => {
   root.dataset.apariencia = nextAppearance;
   localStorage.setItem('arkaiusApariencia', nextAppearance);
   syncThemeButton();
-  playClickSound();
 });
 
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const siteHeader = document.querySelector('.site-header');
+function setMenuState(isOpen) {
+  nav?.classList.toggle('is-open', isOpen);
+  body.classList.toggle('menu-open', isOpen);
+  siteHeader?.classList.toggle('has-open-menu', isOpen);
+  menuToggle?.classList.toggle('is-active', isOpen);
+  menuToggle?.setAttribute('aria-expanded', String(isOpen));
+  menuToggle?.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+}
+function syncHeaderScroll() {
+  siteHeader?.classList.toggle('is-scrolled', window.scrollY > 18);
+}
 menuToggle?.addEventListener('click', () => {
-  const isOpen = nav?.classList.toggle('is-open');
-  menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
-  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  setMenuState(!nav?.classList.contains('is-open'));
 });
 nav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    nav.classList.remove('is-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
-    menuToggle?.setAttribute('aria-label', 'Abrir menú');
+    setMenuState(false);
   });
 });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuState(false);
+});
+window.addEventListener('scroll', syncHeaderScroll, { passive: true });
+syncHeaderScroll();
 
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
@@ -194,82 +206,4 @@ form?.addEventListener('submit', (event) => {
   const whatsappNumber = '56900000000';
   const text = `Hola Arkaius Digital, mi nombre es ${nombre}.\nCorreo: ${correo}\nServicio de interés: ${servicio}\nMensaje: ${mensaje}`;
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
-  playClickSound();
-});
-
-let audioContext;
-let humOscillator;
-let humGain;
-const soundToggle = document.querySelector('.sound-toggle');
-let soundEnabled = localStorage.getItem('arkaiusSonido') === 'activado';
-
-function ensureAudioContext() {
-  if (!audioContext) {
-    const AudioCtor = window.AudioContext || window.webkitAudioContext;
-    if (!AudioCtor) return undefined;
-    audioContext = new AudioCtor();
-  }
-  return audioContext;
-}
-function playTone({ frequency = 520, duration = 0.06, gain = 0.008 } = {}) {
-  if (!soundEnabled) return;
-  const context = ensureAudioContext();
-  if (!context) return;
-  const oscillator = context.createOscillator();
-  const volume = context.createGain();
-  oscillator.type = 'sine';
-  oscillator.frequency.setValueAtTime(frequency, context.currentTime);
-  volume.gain.setValueAtTime(0, context.currentTime);
-  volume.gain.linearRampToValueAtTime(gain, context.currentTime + 0.012);
-  volume.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + duration);
-  oscillator.connect(volume).connect(context.destination);
-  oscillator.start();
-  oscillator.stop(context.currentTime + duration);
-}
-function startHum() {
-  if (!soundEnabled || humOscillator) return;
-  const context = ensureAudioContext();
-  if (!context) return;
-  humOscillator = context.createOscillator();
-  humGain = context.createGain();
-  humOscillator.type = 'sine';
-  humOscillator.frequency.value = 92;
-  humGain.gain.value = 0.0025;
-  humOscillator.connect(humGain).connect(context.destination);
-  humOscillator.start();
-}
-function stopHum() {
-  if (!humOscillator) return;
-  humOscillator.stop();
-  humOscillator.disconnect();
-  humOscillator = undefined;
-  humGain = undefined;
-}
-function playHoverSound() { playTone({ frequency: 680, duration: 0.04, gain: 0.005 }); }
-function playClickSound() { playTone({ frequency: 430, duration: 0.06, gain: 0.007 }); }
-function syncSoundButton() {
-  if (!soundToggle) return;
-  soundToggle.innerHTML = `<span aria-hidden="true">${soundEnabled ? '♪' : '♪'}</span>`;
-  soundToggle.classList.toggle('is-active', soundEnabled);
-  soundToggle.setAttribute('aria-pressed', String(soundEnabled));
-  soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonido' : 'Activar sonido');
-  soundToggle.setAttribute('title', soundEnabled ? 'Desactivar sonido' : 'Activar sonido');
-}
-syncSoundButton();
-soundToggle?.addEventListener('click', async () => {
-  soundEnabled = !soundEnabled;
-  localStorage.setItem('arkaiusSonido', soundEnabled ? 'activado' : 'desactivado');
-  syncSoundButton();
-  if (soundEnabled) {
-    const context = ensureAudioContext();
-    await context?.resume();
-    startHum();
-    playClickSound();
-  } else {
-    stopHum();
-  }
-});
-document.querySelectorAll('a, button, .service-card, .approach-card, .price-card').forEach((element) => {
-  element.addEventListener('pointerenter', playHoverSound);
-  element.addEventListener('click', playClickSound);
 });
