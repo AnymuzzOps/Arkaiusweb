@@ -3,7 +3,7 @@ const body = document.body;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-const savedMode = localStorage.getItem('arkaiusModo') || 'azul';
+const savedMode = localStorage.getItem('arkaiusModo') || 'negro';
 body.classList.toggle('modo-negro', savedMode === 'negro');
 body.classList.toggle('modo-azul', savedMode !== 'negro');
 
