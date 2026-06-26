@@ -6,12 +6,13 @@
     <meta name="description" content="Arkaius Digital SpA ofrece soluciones tecnológicas para empresas, pymes y emprendedores: desarrollo web, automatización con IA, bots, consultoría informática, redes y soporte tecnológico en Chile." />
     <meta name="keywords" content="consultoría informática, desarrollo web, bots con IA, automatización, redes informáticas, soporte tecnológico, páginas web con IA, Chile, Arkaius Digital" />
     <title>Arkaius Digital SpA — Tecnología, IA, Redes y Desarrollo Web</title>
+    <script>document.documentElement.dataset.apariencia = localStorage.getItem("arkaiusApariencia") || (window.matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "oscuro");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="modo-negro">
+  <body>
     <div class="loader" aria-label="Cargando Arkaius Digital">
       <div class="loader__mark" aria-hidden="true">A</div>
       <p>Arkaius Digital</p>
@@ -40,8 +41,9 @@
           <a href="#contacto">Contacto</a>
         </nav>
         <div class="header-actions">
-          <button class="theme-toggle" type="button" aria-label="Cambiar a Modo Negro">Modo Negro</button>
-          <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido sutil">Sonido desactivado</button>
+          <button class="theme-toggle icon-control" type="button" aria-label="Cambiar a modo claro" title="Cambiar apariencia"><span aria-hidden="true">☾</span></button>
+          <button class="sound-toggle icon-control" type="button" aria-pressed="false" aria-label="Activar sonido" title="Activar sonido"><span aria-hidden="true">♪</span></button>
+          <button class="menu-toggle icon-control" type="button" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
         </div>
       </header>
 
@@ -63,24 +65,25 @@
               <span>Soporte TI</span>
             </div>
           </div>
-          <div class="hero__visual reveal" data-depth="0.32" aria-hidden="true">
-            <div class="hero-system tilt-card">
-              <svg class="hero-system__lines" viewBox="0 0 520 520" focusable="false">
-                <path d="M90 260 C150 170 234 152 310 190 S420 238 448 134" />
-                <path d="M86 372 C168 330 212 378 290 322 S384 244 456 292" />
-                <path d="M140 118 L228 204 L206 318 L316 402 L430 342" />
-                <path d="M102 224 H192 L260 276 H386" />
+          <div class="hero__visual reveal" data-depth="0.28" aria-hidden="true">
+            <div class="digital-orbit">
+              <svg class="digital-orbit__threads" viewBox="0 0 560 560" focusable="false">
+                <path d="M82 284 C156 126 390 120 478 276 C410 420 168 438 82 284Z" />
+                <path d="M142 170 C250 214 338 344 424 398" />
+                <path d="M124 390 C224 318 314 226 446 164" />
+                <path d="M280 76 C328 184 322 360 280 484" />
               </svg>
-              <div class="hero-system__core"><i></i><i></i><i></i></div>
-              <span class="hero-node hero-node--one"></span>
-              <span class="hero-node hero-node--two"></span>
-              <span class="hero-node hero-node--three"></span>
-              <span class="hero-node hero-node--four"></span>
-              <span class="hero-node hero-node--five"></span>
-              <span class="hero-node hero-node--six"></span>
-              <div class="hero-system__panel hero-system__panel--one"><i></i><i></i><i></i></div>
-              <div class="hero-system__panel hero-system__panel--two"><i></i><i></i></div>
-              <div class="hero-system__scan"></div>
+              <div class="digital-orbit__halo"></div>
+              <div class="digital-orbit__core"><i></i><i></i><i></i></div>
+              <span class="orbit-particle orbit-particle--one"></span>
+              <span class="orbit-particle orbit-particle--two"></span>
+              <span class="orbit-particle orbit-particle--three"></span>
+              <span class="orbit-particle orbit-particle--four"></span>
+              <span class="orbit-particle orbit-particle--five"></span>
+              <span class="orbit-particle orbit-particle--six"></span>
+              <span class="orbit-point orbit-point--one"></span>
+              <span class="orbit-point orbit-point--two"></span>
+              <span class="orbit-point orbit-point--three"></span>
             </div>
           </div>
         </section>

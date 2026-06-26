@@ -3,25 +3,40 @@ const body = document.body;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-const savedMode = localStorage.getItem('arkaiusModo') || 'negro';
-body.classList.toggle('modo-negro', savedMode === 'negro');
-body.classList.toggle('modo-azul', savedMode !== 'negro');
+const savedAppearance = localStorage.getItem('arkaiusApariencia');
+const initialAppearance = savedAppearance || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'claro' : 'oscuro');
+root.dataset.apariencia = initialAppearance;
 
 const themeToggle = document.querySelector('.theme-toggle');
 function syncThemeButton() {
-  const isBlack = body.classList.contains('modo-negro');
+  const isLight = root.dataset.apariencia === 'claro';
   if (!themeToggle) return;
-  themeToggle.textContent = isBlack ? 'Modo Azul' : 'Modo Negro';
-  themeToggle.setAttribute('aria-label', isBlack ? 'Cambiar a Modo Azul' : 'Cambiar a Modo Negro');
+  themeToggle.innerHTML = `<span aria-hidden="true">${isLight ? '☀' : '☾'}</span>`;
+  themeToggle.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+  themeToggle.setAttribute('title', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
 }
 syncThemeButton();
 themeToggle?.addEventListener('click', () => {
-  const nextBlack = !body.classList.contains('modo-negro');
-  body.classList.toggle('modo-negro', nextBlack);
-  body.classList.toggle('modo-azul', !nextBlack);
-  localStorage.setItem('arkaiusModo', nextBlack ? 'negro' : 'azul');
+  const nextAppearance = root.dataset.apariencia === 'claro' ? 'oscuro' : 'claro';
+  root.dataset.apariencia = nextAppearance;
+  localStorage.setItem('arkaiusApariencia', nextAppearance);
   syncThemeButton();
   playClickSound();
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+menuToggle?.addEventListener('click', () => {
+  const isOpen = nav?.classList.toggle('is-open');
+  menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+});
+nav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('is-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Abrir menú');
+  });
 });
 
 const reveals = document.querySelectorAll('.reveal');
@@ -126,9 +141,9 @@ function drawCanvas() {
   }
   canvasFrameRunning = true;
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-  const blackMode = body.classList.contains('modo-negro');
-  ctx.fillStyle = blackMode ? 'rgba(143, 211, 244, 0.34)' : 'rgba(119, 205, 248, 0.42)';
-  ctx.strokeStyle = blackMode ? 'rgba(143, 211, 244, 0.07)' : 'rgba(119, 205, 248, 0.09)';
+  const darkMode = root.dataset.apariencia !== 'claro';
+  ctx.fillStyle = darkMode ? 'rgba(109, 213, 250, 0.30)' : 'rgba(36, 118, 199, 0.26)';
+  ctx.strokeStyle = darkMode ? 'rgba(109, 213, 250, 0.06)' : 'rgba(36, 118, 199, 0.07)';
 
   particles.forEach((particle, index) => {
     particle.x += particle.vx;
@@ -234,9 +249,11 @@ function playHoverSound() { playTone({ frequency: 680, duration: 0.04, gain: 0.0
 function playClickSound() { playTone({ frequency: 430, duration: 0.06, gain: 0.007 }); }
 function syncSoundButton() {
   if (!soundToggle) return;
-  soundToggle.textContent = soundEnabled ? 'Sonido activado' : 'Sonido desactivado';
+  soundToggle.innerHTML = `<span aria-hidden="true">${soundEnabled ? '♪' : '♪'}</span>`;
+  soundToggle.classList.toggle('is-active', soundEnabled);
   soundToggle.setAttribute('aria-pressed', String(soundEnabled));
-  soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonido sutil' : 'Activar sonido sutil');
+  soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonido' : 'Activar sonido');
+  soundToggle.setAttribute('title', soundEnabled ? 'Desactivar sonido' : 'Activar sonido');
 }
 syncSoundButton();
 soundToggle?.addEventListener('click', async () => {
